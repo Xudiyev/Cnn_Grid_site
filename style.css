@@ -1,0 +1,353 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.2fr 100fr 1fr;
+    grid-template-areas:
+        'header  '
+        'globalContainer  '
+        'footer  ';
+}
+
+/*  Names for grid area start */
+header {
+    grid-area: header;
+
+}
+
+.globalContainer {
+    grid-area: globalContainer;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    grid-area: navbar;
+}
+
+.navBarLeftSide {
+    grid-area: navBarLeftSide;
+}
+
+
+.navBarRightSide {
+    grid-area: navBarRightSide;
+}
+
+/* Name for grid area End */
+
+/* Header start */
+header {
+    max-width: 100%;
+    height: 40px;
+    background: linear-gradient(0deg, #0C0C0C, #0C0C0C),
+        linear-gradient(0deg, #404040, #404040);
+
+
+}
+
+.headerContainer {
+    max-width: 81%;
+    height: 40px;
+    margin: auto;
+}
+
+.navContent {
+    display: grid;
+    grid-template-areas:
+        'navBarLeftSide  navBarRightSide';
+
+}
+
+.navBarLeftSide {
+    display: flex;
+    align-items: center;
+}
+
+nav i {
+    font-size: 25px;
+    cursor: pointer;
+    padding-right: 24px;
+
+}
+
+nav li {
+    list-style: none;
+    padding-left: 22px;
+}
+
+nav li a {
+    color: #E6E6E6;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBarRightSide {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.navBarRightSide li {
+    list-style: none;
+
+}
+
+.navBarRightSide li a {
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+.navBarRightSide i {
+    font-size: 24px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+.navBarRightSide button {
+    width: 61px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid white;
+    color: white;
+    background-color: #0C0C0C;
+    padding: 6px, 9px, 6px, 9px;
+}
+
+/* Header End */
+
+/* Main start  */
+
+.globalContainer {
+    max-width: 85%;
+    margin: auto;
+}
+
+main h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    padding: 48px 0px;
+}
+
+.sectionWithCard {
+    display: grid;  
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+
+}
+
+.sectionWithCard {
+    padding-bottom: 100px;
+}
+
+.sectionWithCard .card {
+    /* width: 21rem !important; */
+    margin-bottom: 24px;
+    border: none;
+}
+
+.sectionWithCard .card-body {
+    padding: 4px 0px;
+}
+
+.sectionWithCard .card  img {
+    width: 100% !important;
+    height: 183px;
+}
+.sectionWithCard .card p {
+    color: #0C0C0C;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+letter-spacing: 0.5px;
+}
+
+/* Main End */
+/* footer start */
+footer {
+    max-width: 100%;
+    background-color: #0C0C0C;
+}
+
+.footerContainer {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 49px;
+}
+
+
+
+.inputPlaceWithSearIcon form input {
+    width: 90%;
+    padding: 7.5px 129px 7.5px 0px;
+    border-radius: 4px;
+    border: none;
+    background: #FFF;
+    position: absolute;
+    left: 50px;
+}   
+
+.inputPlaceWithSearIcon form input:focus {
+    outline: 0px;
+}
+
+.inputPlaceWithSearIcon form input::placeholder {
+    color: #757575;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+.footerContainer form label i {
+    font-size: 24px;
+    left: 0;
+    top: 0;
+    color: #757575 !important;
+    padding: 7.5px 129px 7.5px 20px;
+    position: absolute;
+}
+
+.inputPlaceWithSearIcon {
+    background-color: orange;
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid #B1B1B1;
+    background: #FFF;
+    position: relative;
+    margin-bottom: 49px;
+}
+
+.footerInformationContent {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.footerInformationContent h5 {
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 111.111% */
+}
+.footerInformationContent ul {
+    padding: 0px;
+    padding-bottom: 20px;
+}
+.footerInformationContent ul li {
+    list-style: none;
+}
+
+.footerInformationContent ul li a {
+    text-decoration: none;
+    color: #E6E6E6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 128.571% */
+}
+
+/* footer end */
+
+/* Media Query */
+
+/*  Tablet version */
+@media only screen and (max-width: 1260px) {
+    
+
+    .headerContainer {
+        max-width: 95%;
+        height: 70px;
+        margin: auto;
+    }
+    .globalContainer {
+        max-width: 96%;
+        margin: auto;
+    }
+    .sectionWithCard {
+        display: grid;
+        grid-template-columns: 0.7fr 0.7fr 0.7fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
+    }
+   
+    .sectionWithCard .card img{
+        max-width: 100%!important;
+    }
+  
+    
+    .sectionWithCard .tableVersionCarNone{
+        display: none;
+    }
+
+    .footerInformationContent {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .tabletVersionNonelist{
+        display: none;
+    }
+    
+}
+
+
+@media only screen and (max-width:1052px) {
+    .mobileVersionHeaderListNone{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    .mobileVersionListNone{
+        display: none;
+    }
+    .sectionWithCard {
+        display: grid;
+        grid-template-columns: 0.7fr 0.7fr  ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    
+    }
+    .footerInformationContent {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .sectionWithCard .mobileVersionCardNone{
+        display: none;
+    }
+  
+  
+} 
+
+@media only screen and (max-width: 420px){
+ .mobileVersionHeaderListNoneafter420px{
+    display: none;
+ }
+
+} 
